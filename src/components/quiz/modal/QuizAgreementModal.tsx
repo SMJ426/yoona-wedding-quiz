@@ -34,13 +34,15 @@ export default function QuizAgreementModal({ onCloseModal }: Props) {
         </div>
       </div>
       {/* 정보 입력하러 가기 */}
-      <button
-        type="button"
-        onClick={onCloseModal}
-        className="flex items-center justify-center w-full h-[55px] rounded-[10px] bg-blue-600 font-bold text-[18px] text-white"
-      >
-        정보 입력하러 가기
-      </button>
+      <div className="absolute bottom-0 left-0 w-full px-[20px] pb-[20px] bg-white">
+        <button
+          type="button"
+          onClick={onCloseModal}
+          className="flex items-center justify-center w-full h-[55px] rounded-[10px] bg-blue-600 font-bold text-[18px] text-white"
+        >
+          정보 입력하러 가기
+        </button>
+      </div>
     </div>
   );
 }
