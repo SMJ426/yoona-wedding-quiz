@@ -1,14 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 type Props = {
   quizNumber: number;
 };
 
 const ProgressBarSection: React.FC<Props> = ({ quizNumber }) => {
-  return <StyledWrapper>{quizNumber}</StyledWrapper>;
+  return <div>{quizNumber}</div>;
 };
 
 export default ProgressBarSection;
 
-const StyledWrapper = styled.h2``;
+// const StyledWrapper = styled.h2``;

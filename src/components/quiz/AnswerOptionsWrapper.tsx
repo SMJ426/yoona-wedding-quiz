@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import AnswerOption from './AnswerOption';
 
 type Props = {
@@ -12,7 +12,7 @@ const AnswerOptionsWrapper: React.FC<Props> = ({
   answersData,
 }) => {
   return (
-    <StyledWrapper>
+    <div>
       {optionsData.map((option, index) => {
         return (
           <div className="wrapper-items" key={index}>
@@ -22,10 +22,10 @@ const AnswerOptionsWrapper: React.FC<Props> = ({
         );
       })}
       <AnswerOption answersData={answersData} />
-    </StyledWrapper>
+    </div>
   );
 };
 
 export default AnswerOptionsWrapper;
 
-const StyledWrapper = styled.div``;
+// const StyledWrapper = styled.div``;

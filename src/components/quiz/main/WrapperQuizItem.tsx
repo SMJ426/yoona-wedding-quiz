@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import { QuizItem } from '../../../data/quizType';
 import QuizResults from '../QuizResults';
 import QuizCard from '../QuizCard';
@@ -16,16 +16,16 @@ const WrapperQuizItem: React.FC<Props> = ({
   currentQuestion,
 }) => {
   return (
-    <StyledWrapper>
+    <div>
       {quizCompleted ? (
         <QuizResults />
       ) : (
         <QuizCard quizData={quizData} currentQuestion={currentQuestion} />
       )}
-    </StyledWrapper>
+    </div>
   );
 };
 
 export default WrapperQuizItem;
 
-const StyledWrapper = styled.div``;
+// const StyledWrapper = styled.div``;

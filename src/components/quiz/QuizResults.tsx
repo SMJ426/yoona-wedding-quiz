@@ -1,10 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 const QuizResults: React.FC = ({}) => {
-  return <StyledWrapper>QuizResults</StyledWrapper>;
+  return <div>QuizResults</div>;
 };
 
 export default QuizResults;
 
-const StyledWrapper = styled.div``;
+// const StyledWrapper = styled.div``;

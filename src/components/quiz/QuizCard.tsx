@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import ProgressBarSection from './ProgressBarSection';
 import QuizQuestion from './QuizQuestion';
 import AnswerOptionsWrapper from './AnswerOptionsWrapper';
@@ -12,17 +12,17 @@ type Props = {
 
 const QuizCard: React.FC<Props> = ({ quizData, currentQuestion }) => {
   return (
-    <StyledWrapper>
+    <div>
       <ProgressBarSection quizNumber={currentQuestion + 1} />
       <QuizQuestion questionsData={quizData.question} />
       <AnswerOptionsWrapper
         optionsData={quizData.options}
         answersData={quizData.answer}
       />
-    </StyledWrapper>
+    </div>
   );
 };
 
 export default QuizCard;
 
-const StyledWrapper = styled.div``;
+// const StyledWrapper = styled.div``;

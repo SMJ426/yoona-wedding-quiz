@@ -8,7 +8,22 @@ module.exports = {
     './styles/**/*.{css}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        blue_gray: {
+          500: 'rgb(164 169 176)',
+        },
+      },
+      keyframes: {
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+      animation: {
+        'fade-in-splash': 'fade-in 2s forwards',
+      },
+    },
   },
   plugins: [],
 };

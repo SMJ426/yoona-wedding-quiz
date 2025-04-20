@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import { quizData } from '../../../data/quizData';
 import WrapperQuizItem from '../../../components/quiz/main/WrapperQuizItem';
 import NextQuestionButton from '../../../components/quiz/main/NextQuestionButton';
@@ -20,17 +20,17 @@ const ScreenQuizMain: React.FC = () => {
   };
 
   return (
-    <StyledWrapper>
+    <div>
       <WrapperQuizItem
         quizData={quizData[currentQuestion]}
         quizCompleted={quizCompleted}
         currentQuestion={currentQuestion}
       />
       <NextQuestionButton onNextQuestionClick={handleNextQuestionClick} />
-    </StyledWrapper>
+    </div>
   );
 };
 
 export default ScreenQuizMain;
 
-const StyledWrapper = styled.div``;
+// const StyledWrapper = styled.div``;
