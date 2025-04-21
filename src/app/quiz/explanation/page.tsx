@@ -26,13 +26,22 @@ const ScreenQuizExplanation: React.FC = ({}) => {
       />
       {/* description section */}
       <div className="p-[20px] text-gray-500 text-[17px] ">
-        <ul className="flex flex-col pl-5 list-disc gap-[5px]">
-          <li>신랑신부 퀴즈 이벤트는 어떤 어떤 어떤 어떤 취지의 퀴즈입니다.</li>
+        <ul className="flex flex-col pl-5 list-disc gap-[8px]">
           <li>
-            당첨자는 이벤트 종료 후 결혼식 마지막? 2부?에 따로 안내드려요.
+            신랑 신부의 추억을 되새기며 모두가 함께 즐길 수 있는 퀴즈
+            이벤트입니다.
           </li>
-          <li>약관에 동의하면 새 글 알림을 보내드려요.</li>
-          <li>약관에 동의한 사람만 아티클 전문을 읽을 수 있어요.</li>
+          <li>
+            퀴즈에 참여해주신 분들 중 추첨을 통해 소정의 선물을 드릴 예정이에요.
+          </li>
+          <li>
+            결혼식 2부 순서에서 당첨자와 선물을 발표할 예정이니 많은 참여
+            부탁드려요!
+          </li>
+          <li>간단한 정보 입력 후 바로 퀴즈에 참여하실 수 있어요.</li>
+          <li>
+            이 퀴즈 페이지는 신부 신유나의 동생 신민재가 직접 만들었어요(자랑)
+          </li>
         </ul>
       </div>
       {/* '퀴즈풀러 가기' button */}
