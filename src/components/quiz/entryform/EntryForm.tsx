@@ -3,6 +3,19 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
+// 자동으로 '-' 붙여주는 로직
+const formatPhoneNumber = (value: string) => {
+  const digits = value.replace(/\D/g, '').slice(0, 11);
+  const len = digits.length;
+  if (len < 4) {
+    return digits;
+  } else if (len < 8) {
+    return `${digits.slice(0, 3)}-${digits.slice(3)}`;
+  } else {
+    return `${digits.slice(0, 3)}-${digits.slice(3, 7)}-${digits.slice(7)}`;
+  }
+};
+
 const EntryForm: React.FC = () => {
   const router = useRouter();
   const [name, setName] = useState('');
@@ -10,6 +23,7 @@ const EntryForm: React.FC = () => {
   const [phoneError, setPhoneError] = useState('');
   const [displayName, setDisplayName] = useState('');
 
+  // 포맷된 값을 /^010-\d{4}-\d{4}$/ 으로 체크
   const validatePhone = (value: string) => {
     const phoneRegex = /^010-\d{4}-\d{4}$/;
     if (!phoneRegex.test(value)) {
@@ -21,12 +35,10 @@ const EntryForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
     if (phoneError) {
       alert('전화번호 형식이 올바르지 않습니다.');
       return;
     }
-
     alert(`제출됨: 이름=${name}, 전화번호=${phone}`);
     router.push('/quiz/main');
   };
@@ -44,6 +56,7 @@ const EntryForm: React.FC = () => {
         <p>아래 정보를 입력해주세요</p>
       </div>
 
+      {/* 이름 입력 필드 */}
       <label className="flex gap-[0px] flex-col w-full h-[50px] mt-[50px]">
         <p className="text-[13px]">이름</p>
         <input
@@ -62,10 +75,11 @@ const EntryForm: React.FC = () => {
         <p className="text-[13px]">휴대폰 번호 (010-0000-0000)</p>
         <input
           type="tel"
-          placeholder="010-0000-0000 형식으로 적어주세요."
+          placeholder="숫자만 입력하세요"
           value={phone}
           onChange={(e) => {
-            setPhone(e.target.value);
+            const formatted = formatPhoneNumber(e.target.value);
+            setPhone(formatted);
             if (phoneError) setPhoneError('');
           }}
           onBlur={(e) => validatePhone(e.target.value)}
