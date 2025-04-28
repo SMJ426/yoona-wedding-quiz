@@ -1,5 +1,4 @@
 import React from 'react';
-// import styled from 'styled-components';
 
 type Props = {
   questionsData: string;
@@ -7,12 +6,10 @@ type Props = {
 
 const QuizQuestion: React.FC<Props> = ({ questionsData }) => {
   return (
-    <div>
+    <div className=" flex items-center justify-center w-full h-[100px] font-extrabold text-[25px] text-center">
       <h3>{questionsData}</h3>
     </div>
   );
 };
 
 export default QuizQuestion;
-
-// const StyledWrapper = styled.div``;

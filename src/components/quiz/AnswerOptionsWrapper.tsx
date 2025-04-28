@@ -1,31 +1,37 @@
+'use client';
+
 import React from 'react';
-// import styled from 'styled-components';
-import AnswerOption from './AnswerOption';
+import AnswerItem from './AnswerItem';
 
 type Props = {
   optionsData: string[];
-  answersData: string;
+  answerIndex: number;
+  selectedIndex: number | null;
+  setSelectedIndex: React.Dispatch<React.SetStateAction<number | null>>;
 };
 
 const AnswerOptionsWrapper: React.FC<Props> = ({
   optionsData,
-  answersData,
+  answerIndex,
+  selectedIndex,
+  setSelectedIndex,
 }) => {
   return (
-    <div>
+    <div className=" flex flex-col gap-[15px] ">
       {optionsData.map((option, index) => {
         return (
-          <div className="wrapper-items" key={index}>
-            <span>{index + 1}</span>
-            <div>{option}</div>
-          </div>
+          <AnswerItem
+            option={option}
+            index={index}
+            key={index}
+            isCorrect={index === answerIndex}
+            isSelected={index === selectedIndex}
+            onSelect={() => setSelectedIndex(index)}
+          />
         );
       })}
-      <AnswerOption answersData={answersData} />
     </div>
   );
 };
 
 export default AnswerOptionsWrapper;
-
-// const StyledWrapper = styled.div``;
