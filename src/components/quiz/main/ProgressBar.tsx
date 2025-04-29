@@ -14,7 +14,7 @@ const ProgressBar: React.FC<Props> = ({
   }, [currentQuestionIndex, totalQuizCount]);
 
   return (
-    <div className="flex items-center justify-center space-x-2">
+    <div className="flex items-center justify-center space-x-2 mt-[25px]">
       <p className="text-lg font-bold">
         {currentQuestionIndex + 1}/{totalQuizCount}
       </p>

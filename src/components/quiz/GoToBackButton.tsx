@@ -6,7 +6,11 @@ type Props = {
 
 const GoToBackButton: React.FC<Props> = ({ onClickBackButton }) => {
   return (
-    <button type="button" onClick={onClickBackButton}>
+    <button
+      type="button"
+      onClick={onClickBackButton}
+      className="absolute top-[20px] left-[20px]"
+    >
       뒤로가기
     </button>
   );

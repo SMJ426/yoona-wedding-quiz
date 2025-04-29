@@ -27,7 +27,7 @@ const AnswerItem: React.FC<Props> = ({ option, isSelected, onSelect }) => {
           ${isSelected ? 'bg-black' : ''}
         `}
       />
-      <div className="text-lg">{option}</div>
+      <div className="text-[15px]">{option}</div>
     </div>
   );
 };

@@ -24,7 +24,7 @@ const ScreenQuizMain: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col p-[25px] w-full h-full gap-[40px]">
+    <div className="relative flex flex-col p-[25px] w-full h-full gap-[20px]">
       {currentQuestionIndex !== 0 && (
         <GoToBackButton onClickBackButton={handleClickBackButton} />
       )}
