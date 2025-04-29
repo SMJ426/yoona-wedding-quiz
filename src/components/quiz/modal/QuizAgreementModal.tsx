@@ -4,7 +4,7 @@ interface Props {
 
 export default function QuizAgreementModal({ onCloseModal }: Props) {
   return (
-    <div className="z-10 bg-[#f9f9f9] w-screen h-screen p-[20px] flex flex-col gap-[50px] items-center absolute top-0 left-0">
+    <div className="z-10 bg-[#f9f9f9] w-screen h-screen p-[20px] flex flex-col gap-[20px] items-center absolute top-0 left-0">
       {/* 메인 문구 */}
       <div className="mt-[50px] font-extrabold text-[30px]">
         <p>간단한 정보를</p>
@@ -34,11 +34,11 @@ export default function QuizAgreementModal({ onCloseModal }: Props) {
         </div>
       </div>
       {/* 정보 입력하러 가기 */}
-      <div className="absolute bottom-0 left-0 w-full px-[20px] pb-[20px] bg-white">
+      <div className="w-screen px-[20px] pb-[20px] ">
         <button
           type="button"
           onClick={onCloseModal}
-          className="flex items-center justify-center w-full h-[55px] rounded-[10px] bg-blue-600 font-bold text-[18px] text-white"
+          className="flex items-center justify-center w-full h-[55px] rounded-[10px] bg-blue-600 font-bold text-[18px] text-white active:scale-95 transition-transform duration-100 "
         >
           정보 입력하러 가기
         </button>

@@ -8,7 +8,7 @@ const ScreenQuizEntryForm: React.FC = ({}) => {
   const [shouldShowModal, setShouldShowModal] = useState(true);
 
   return (
-    <div className="relative h-screen">
+    <div className="relative w-full h-screen">
       {/* 개인정보 동의 모달 */}
       {shouldShowModal && (
         <QuizAgreementModal onCloseModal={() => setShouldShowModal(false)} />

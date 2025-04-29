@@ -15,7 +15,7 @@ const NextQuestionButton: React.FC<Props> = ({
       onClick={onNextQuestionClick}
       disabled={disabled}
       className={`
-        rounded-[30px] w-full flex items-center justify-center h-[70px] mb-[40px]
+        rounded-[30px] w-full flex items-center justify-center h-[50px] mb-[40px]
         font-extrabold text-white
         transition-all
         ${

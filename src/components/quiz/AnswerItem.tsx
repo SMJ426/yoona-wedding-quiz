@@ -14,7 +14,7 @@ const AnswerItem: React.FC<Props> = ({ option, isSelected, onSelect }) => {
       onClick={onSelect}
       className={`
         cursor-pointer
-        p-4 flex items-center gap-4 w-full h-[70px]
+        p-4 flex items-center gap-4 w-full h-[50px]
         bg-white rounded-[30px]
         transition-shadow
         ${isSelected ? 'shadow-lg' : 'shadow-sm'}
@@ -22,7 +22,7 @@ const AnswerItem: React.FC<Props> = ({ option, isSelected, onSelect }) => {
     >
       <div
         className={`
-          w-8 h-8 rounded-full border-2 border-neutral-700 flex-shrink-0
+          w-6 h-6 rounded-full border-2 border-neutral-700 flex-shrink-0
           transition-colors
           ${isSelected ? 'bg-black' : ''}
         `}

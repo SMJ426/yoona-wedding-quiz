@@ -93,7 +93,7 @@ const EntryForm: React.FC = () => {
 
       <button
         type="submit"
-        className="flex items-center justify-center px-[20px] py-[10px] rounded bg-blue-600 font-bold text-[18px] text-white"
+        className="flex items-center justify-center px-[20px] py-[10px] rounded bg-blue-600 font-bold text-[18px] text-white active:scale-95 transition-transform duration-100"
       >
         제출
       </button>
