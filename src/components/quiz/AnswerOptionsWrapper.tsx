@@ -7,14 +7,14 @@ type Props = {
   optionsData: string[];
   answerIndex: number;
   selectedIndex: number | null;
-  setSelectedIndex: React.Dispatch<React.SetStateAction<number | null>>;
+  onSelect: (idx: number) => void;
 };
 
 const AnswerOptionsWrapper: React.FC<Props> = ({
   optionsData,
   answerIndex,
   selectedIndex,
-  setSelectedIndex,
+  onSelect,
 }) => {
   return (
     <div className=" flex flex-col gap-[15px] ">
@@ -26,7 +26,7 @@ const AnswerOptionsWrapper: React.FC<Props> = ({
             key={index}
             isCorrect={index === answerIndex}
             isSelected={index === selectedIndex}
-            onSelect={() => setSelectedIndex(index)}
+            onSelect={() => onSelect(index)}
           />
         );
       })}

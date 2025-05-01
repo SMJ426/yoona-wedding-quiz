@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 // 자동으로 '-' 붙여주는 로직
@@ -36,12 +36,18 @@ const EntryForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (phoneError) {
-      alert('전화번호 형식이 올바르지 않습니다.');
       return;
     }
-    alert(`제출됨: 이름=${name}, 전화번호=${phone}`);
+    localStorage.setItem(
+      'quizUser',
+      JSON.stringify({ name: name.trim(), phone: phone.trim() })
+    );
     router.push('/quiz/main');
   };
+
+  const isFormValid = useMemo(() => {
+    return name.trim() !== '' && /^010-\d{4}-\d{4}$/.test(phone);
+  }, [name, phone]);
 
   return (
     <form
@@ -70,17 +76,19 @@ const EntryForm: React.FC = () => {
         />
       </label>
 
-      {/** 전화번호 필드 */}
+      {/* 전화번호 필드 */}
       <label className="flex flex-col w-full min-h-[70px]">
         <p className="text-[13px]">휴대폰 번호 (010-0000-0000)</p>
         <input
           type="tel"
           placeholder="숫자만 입력하세요"
           value={phone}
-          onChange={(e) => {
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
             const formatted = formatPhoneNumber(e.target.value);
             setPhone(formatted);
-            if (phoneError) setPhoneError('');
+            if (phoneError) {
+              setPhoneError('');
+            }
           }}
           onBlur={(e) => validatePhone(e.target.value)}
           required
@@ -93,7 +101,12 @@ const EntryForm: React.FC = () => {
 
       <button
         type="submit"
-        className="flex items-center justify-center px-[20px] py-[10px] rounded bg-blue-600 font-bold text-[18px] text-white active:scale-95 transition-transform duration-100"
+        disabled={!isFormValid}
+        className={`flex items-center justify-center px-[20px] py-[10px] rounded font-bold text-[18px] transition-transform duration-100 ${
+          isFormValid
+            ? 'bg-blue-600 text-white active:scale-95'
+            : 'bg-gray-400 text-white cursor-not-allowed'
+        }`}
       >
         제출
       </button>

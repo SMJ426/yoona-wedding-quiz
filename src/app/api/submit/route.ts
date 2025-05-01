@@ -3,6 +3,7 @@ import clientPromise from '../../../../lib/mongodb';
 
 export async function POST(req: Request) {
   const { name, phone, score } = await req.json();
+
   // 1) 유효성 검사
   if (!name || !phone || typeof score !== 'number') {
     return NextResponse.json({ error: 'Invalid payload' }, { status: 400 });

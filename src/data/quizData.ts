@@ -21,7 +21,7 @@ export const quizData: QuizItem[] = [
       '난 아직 마음의 준비가 안됐어 미안',
       '오빠 똥마려?',
     ],
-    answerIndex: 3,
+    answerIndex: 4,
   },
 ];
 
