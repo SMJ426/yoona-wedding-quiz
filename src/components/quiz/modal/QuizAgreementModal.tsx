@@ -11,7 +11,10 @@ export default function QuizAgreementModal({ onCloseModal }: Props) {
         <p>입력해주세요!</p>
       </div>
       {/* 중앙 이미지 */}
-      <img src="/images/couple.png" alt="정보수집동의" className="w-[70%]" />
+      <div className="flex items-center justify-center gap-[15px] pb-[10px]">
+        <img className="w-[150px]" src="/images/yoona.png" alt="유나" />
+        <img className="w-[150px]" src="/images/heedo.png" alt="희도" />
+      </div>
       {/* 간단한 Q&A */}
       <div className="p-[20px] w-full border border-solid border-blue_gray-500 rounded-[9px]">
         <div className="flex items-center justify-start gap-[10px]">
