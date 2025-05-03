@@ -10,12 +10,12 @@ const ScreenQuizExplanation: React.FC = ({}) => {
     <div className="flex flex-col justify-start w-full h-screen ">
       {/* title section */}
       <div className="p-[20px]">
-        <p>Yoona&Heedo Wedding</p>
-        <h2 className="font-bold text-[30px]">신랑 신부 퀴즈</h2>
+        <p className="text-[13px]">유나와 희도의 결혼식</p>
+        {/* <h2 className="font-bold text-[30px]">신랑 신부 퀴즈</h2> */}
         <div className="text-gray-500 text-[17px] pt-[5px]">
           <p>우리의 소중한 추억을 얼마나 알고 계신가요?</p>
-          <p>재미있는 퀴즈를 풀고 특별한 선물과 함께</p>
-          <p>특별한 날을 더욱 기억에 남게 해주세요!</p>
+          <p>퀴즈를 풀고 특별한 선물과 함께</p>
+          <p>결혼식을 즐겨주세요!</p>
         </div>
       </div>
       {/* main image section */}
