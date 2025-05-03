@@ -6,7 +6,7 @@ type Props = {
 
 const QuizQuestion: React.FC<Props> = ({ questionsData }) => {
   return (
-    <div className=" flex items-center justify-center w-full h-[100px] font-extrabold text-[25px] text-center">
+    <div className="whitespace-pre-line flex items-center justify-center w-full h-[100px] font-extrabold text-[25px] text-center">
       <h3>{questionsData}</h3>
     </div>
   );
