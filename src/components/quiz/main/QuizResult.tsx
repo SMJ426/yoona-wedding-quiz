@@ -79,7 +79,7 @@ const QuizResult: React.FC = () => {
       {/* 퀴즈 부연 설명 */}
       <ul className="flex flex-col gap-2 px-8 py-5 list-disc w-full border border-solid border-blue_gray-500 rounded-[9px] mt-20">
         <li>
-          퀴즈에 참여해주신 분들 중 추천을 통해 소정의 선물을 드릴 예정이에요.
+          퀴즈에 참여해주신 분들 중 추첨을 통해 소정의 선물을 드릴 예정이에요.
         </li>
         <li>결혼식 2부 순서에서 당첨자와 선물을 발표할 예정입니다.</li>
       </ul>
