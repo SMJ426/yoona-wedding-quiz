@@ -54,7 +54,7 @@ const EntryForm: React.FC = () => {
       onSubmit={handleSubmit}
       className="flex flex-col items-start w-screen h-screen gap-[40px] p-[20px]"
     >
-      <div className="font-extrabold text-[30px] flex flex-col items-center justify-center w-full mt-[100px] text-center">
+      <div className="font-extrabold text-[30px] flex flex-col items-center justify-center w-full pt-[20px] text-center">
         <p className="min-h-[36px] font-extrabold text-[35px]">
           {displayName ? `${displayName}님,` : '\u00A0'}
         </p>
@@ -63,7 +63,7 @@ const EntryForm: React.FC = () => {
       </div>
 
       {/* 이름 입력 필드 */}
-      <label className="flex gap-[0px] flex-col w-full h-[50px] mt-[50px]">
+      <label className="flex gap-[0px] flex-col w-full h-[50px]">
         <p className="text-[13px]">이름</p>
         <input
           type="text"
@@ -99,17 +99,15 @@ const EntryForm: React.FC = () => {
         </p>
       </label>
 
-      <button
-        type="submit"
-        disabled={!isFormValid}
-        className={`flex items-center justify-center px-[20px] py-[10px] rounded font-bold text-[18px] transition-transform duration-100 ${
-          isFormValid
-            ? 'bg-blue-600 text-white active:scale-95'
-            : 'bg-gray-400 text-white cursor-not-allowed'
-        }`}
-      >
-        제출
-      </button>
+      {isFormValid && (
+        <button
+          type="submit"
+          disabled={!isFormValid}
+          className="flex items-center justify-center px-[20px] py-[10px] rounded font-bold text-[18px] transition-transform duration-100 bg-blue-600 text-white active:scale-95"
+        >
+          제출
+        </button>
+      )}
     </form>
   );
 };
