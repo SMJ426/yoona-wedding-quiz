@@ -12,8 +12,8 @@ export default function QuizAgreementModal({ onCloseModal }: Props) {
       </div>
       {/* 중앙 이미지 */}
       <div className="flex items-center justify-center gap-[15px] pb-[10px]">
-        <img className="w-[120px]" src="/images/yoona.png" alt="유나" />
-        <img className="w-[120px]" src="/images/heedo.png" alt="희도" />
+        <img className="w-[120px]" src="/images/yoona.webp" alt="유나" />
+        <img className="w-[120px]" src="/images/heedo.webp" alt="희도" />
       </div>
       {/* 간단한 Q&A */}
       <div className="p-[15px] w-full border border-solid border-blue_gray-500 rounded-[9px]">

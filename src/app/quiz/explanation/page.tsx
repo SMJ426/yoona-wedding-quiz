@@ -19,7 +19,7 @@ const ScreenQuizExplanation: React.FC = ({}) => {
       </div>
       {/* main image section */}
       <img
-        src="/images/main-image.jpg"
+        src="/images/main-image.webp"
         alt="메인 이미지"
         className="h-[250px] object-cover w-screen"
       />
