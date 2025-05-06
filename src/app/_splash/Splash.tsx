@@ -17,7 +17,7 @@ const ScreenSplashContent: React.FC = () => {
   return (
     <div
       className="flex items-center justify-center w-screen h-screen bg-center bg-no-repeat bg-cover animate-fade-in-splash"
-      style={{ backgroundImage: "url('/images/Splash_image.jpeg')" }}
+      style={{ backgroundImage: "url('/images/Splash_image.webp')" }}
     >
       <div className="mt-[350px] text-center text-white">
         <h1 className="text-[40px] mb-[10px]">유나와 희도</h1>
