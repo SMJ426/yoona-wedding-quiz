@@ -6,13 +6,13 @@ import { useEffect } from 'react';
 const ScreenSplashContent: React.FC = () => {
   const router = useRouter();
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     router.push('/quiz/explanation');
-  //   }, 3500);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.push('/quiz/explanation');
+    }, 3500);
 
-  //   return () => clearTimeout(timer);
-  // }, []);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div
