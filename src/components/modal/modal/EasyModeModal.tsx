@@ -35,14 +35,14 @@ const EasyModeModal: React.FC<Props> = ({ onClose }) => {
       <div className="flex items-center justify-center w-full gap-[5%] h-[40px] text-[15px] mt-1">
         <button
           type="button"
-          onClick={handleEasyMode}
+          onClick={handleClickButton}
           className="bg-gray-300 w-[50%] h-full rounded-xl active:scale-95 transition-transform duration-100"
         >
           그냥 둘게요
         </button>
         <button
           type="button"
-          onClick={handleClickButton}
+          onClick={handleEasyMode}
           className="bg-blue-600 w-[50%] h-full rounded-xl text-white active:scale-95 transition-transform duration-100"
         >
           전환 할게요

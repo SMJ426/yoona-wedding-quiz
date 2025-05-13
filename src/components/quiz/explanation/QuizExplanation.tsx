@@ -8,6 +8,11 @@ const QuizExplanation: React.FC = () => {
   const router = useRouter();
   const { mode } = useAccessibility();
 
+  if (mode === 'easy') {
+    router.push('/quiz/entryform');
+    return null;
+  }
+
   return (
     <div className="flex flex-col justify-start w-full h-screen ">
       {/* title section */}
