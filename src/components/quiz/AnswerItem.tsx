@@ -4,7 +4,6 @@ interface Props {
   option: string;
   index: number;
   isSelected: boolean;
-  isCorrect: boolean; // 나중에 정답 표시 용도
   onSelect: () => void;
 }
 

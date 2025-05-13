@@ -65,7 +65,6 @@ const QuizActions: React.FC<Props> = ({
     <div className="flex flex-col justify-between w-full h-full mt-6 ">
       <AnswerOptionsWrapper
         optionsData={quizData.options}
-        answerIndex={quizData.answerIndex}
         selectedIndex={selectedIndex}
         onSelect={handleSelect}
       />
