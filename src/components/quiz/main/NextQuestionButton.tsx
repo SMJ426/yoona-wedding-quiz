@@ -20,7 +20,7 @@ const NextQuestionButton: React.FC<Props> = ({
         transition-all
         ${
           disabled
-            ? 'bg-gray-400 text-white cursor-not-allowed'
+            ? 'bg-gray-300 text-white cursor-not-allowed'
             : 'bg-neutral-900 hover:bg-neutral-800 cursor-pointer'
         }
       `}

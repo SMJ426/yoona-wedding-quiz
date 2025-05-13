@@ -19,10 +19,10 @@ const Modal: React.FC<Props> = ({ children, onClose }) => {
 
   return ReactDOM.createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-black bg-opacity-50"
       onClick={handleBackdropClick}
     >
-      <div className="bg-white p-6 rounded-xl w-[80%] max-w-[320px] text-center">
+      <div className="max-h-[50%] overflow-y-auto w-full max-w-md p-6 text-center bg-[#f9f9f9] shadow-lg rounded-t-2xl">
         {children}
       </div>
     </div>,
