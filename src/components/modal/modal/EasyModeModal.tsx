@@ -21,10 +21,8 @@ const EasyModeModal: React.FC<Props> = ({ onClose }) => {
 
   return (
     <div className="flex flex-col justify-center h-full gap-4 width-full">
-      {/* TODO : 아직 개발중  */}
       <div className="text-[20px] w-[100%] text-black">
         <p>🧓 어르신 모드로 전환할까요?</p>
-        {/* <p>전환하시겠습니까?</p> */}
       </div>
 
       <div className="flex flex-col justify-start items-start text-[15px] text-gray-500">
