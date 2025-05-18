@@ -11,6 +11,8 @@ type Props = {
   setQuizCompleted: Dispatch<SetStateAction<boolean>>;
 };
 
+const STORAGE_KEY = 'quizAnswers';
+
 const QuizActions: React.FC<Props> = ({
   quizData,
   currentQuestionIndex,
@@ -20,7 +22,6 @@ const QuizActions: React.FC<Props> = ({
 }) => {
   // 선택된 보기 인덱스
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const STORAGE_KEY = 'quizAnswers';
 
   // 1) 최초 로드 혹은 문제 인덱스 변경 시, 배열 초기화 및 복원
   useEffect(() => {

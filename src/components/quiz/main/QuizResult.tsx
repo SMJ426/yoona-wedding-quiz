@@ -48,6 +48,7 @@ const QuizResult: React.FC = () => {
           }
           setSubmitted(true);
           localStorage.clear();
+          localStorage.setItem('isUserJoined', 'true');
         })
         .catch(console.error);
     }
