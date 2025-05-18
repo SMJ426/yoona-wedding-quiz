@@ -1,22 +1,28 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const ScreenSplashContent: React.FC = () => {
   const router = useRouter();
+  const [isFadingOut, setIsFadingOut] = useState<boolean>(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.push('/quiz/explanation');
-    }, 3500);
+      setIsFadingOut(true);
+
+      setTimeout(() => {
+        router.push('/quiz/explanation');
+      }, 500);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div
-      className="flex items-center justify-center w-screen h-screen bg-center bg-no-repeat bg-cover animate-fade-in-splash"
+      className={`flex items-center justify-center w-screen h-screen bg-center bg-no-repeat bg-cover
+        ${isFadingOut ? 'animate-fade-out-splash' : 'animate-fade-in-splash'}`}
       style={{ backgroundImage: "url('/images/Splash_image.webp')" }}
     ></div>
   );

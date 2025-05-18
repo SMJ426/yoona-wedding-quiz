@@ -19,9 +19,14 @@ module.exports = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        'fade-out': {
+          '0%': { opacity: 1 },
+          '100%': { opacity: 0 },
+        },
       },
       animation: {
         'fade-in-splash': 'fade-in 2s forwards',
+        'fade-out-splash': 'fade-out 0.5s ease-in forwards',
       },
     },
   },
