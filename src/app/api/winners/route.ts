@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
 import clientPromise from '../../../../lib/mongodb';
+// 캐시가 돼서 추가한 로직
+export const dynamic = 'force-dynamic';
 
 export async function GET() {
   const client = await clientPromise;
