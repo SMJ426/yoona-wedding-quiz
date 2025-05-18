@@ -5,24 +5,24 @@ import { useEffect, useState } from 'react';
 
 const ScreenSplashContent: React.FC = () => {
   const router = useRouter();
-  const [isFadingOut, setIsFadingOut] = useState<boolean>(false);
-  const isUserJoined = localStorage.getItem('isUserJoined') || false;
+  const [isFadingOut, setIsFadingOut] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsFadingOut(true);
 
       setTimeout(() => {
+        const isUserJoined = localStorage.getItem('isUserJoined');
         if (isUserJoined) {
           router.push('/blockeduser');
-          return;
+        } else {
+          router.push('/quiz/explanation');
         }
-        router.push('/quiz/explanation');
       }, 500);
     }, 3000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [router]);
 
   return (
     <div
