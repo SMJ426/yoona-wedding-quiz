@@ -19,6 +19,7 @@ const ScreenDraw: React.FC = ({}) => {
   useEffect(() => {
     fetch('/api/winners', {
       method: 'GET',
+      cache: 'no-store',
     })
       .then((res) => {
         if (!res.ok) {
