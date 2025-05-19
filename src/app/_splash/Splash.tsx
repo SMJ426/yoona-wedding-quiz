@@ -10,15 +10,18 @@ const ScreenSplashContent: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsFadingOut(true);
+      // MEMO : 릴리즈 전 테스트 로직 비활성화
+      router.push('/quiz/explanation');
 
-      setTimeout(() => {
-        const isUserJoined = localStorage.getItem('isUserJoined');
-        if (isUserJoined) {
-          router.push('/blockeduser');
-        } else {
-          router.push('/quiz/explanation');
-        }
-      }, 500);
+      // 이 부분을 주석 해제하고 위에 부분을 제거해야함
+      // setTimeout(() => {
+      //   const isUserJoined = localStorage.getItem('isUserJoined');
+      //   if (isUserJoined) {
+      //     router.push('/blockeduser');
+      //   } else {
+      //     router.push('/quiz/explanation');
+      //   }
+      // }, 500);
     }, 3000);
 
     return () => clearTimeout(timer);
