@@ -27,7 +27,7 @@ const EntryForm: React.FC = () => {
   const validatePhone = (value: string) => {
     const phoneRegex = /^010-\d{4}-\d{4}$/;
     if (!phoneRegex.test(value)) {
-      setPhoneError('전화번호 형식이 올바르지 않습니다. (예: 010-1234-5678)');
+      setPhoneError(`전화번호 형식이 올바르지 않습니다. (예: 010-1234-5678)`);
     } else {
       setPhoneError('');
     }
@@ -94,7 +94,7 @@ const EntryForm: React.FC = () => {
           required
           className="text-[20px] bg-[#f9f9f9] font-bold focus:outline-none focus:ring-0 p-[6px] border-b-[2px]"
         />
-        <p className="mt-1 text-sm min-h-[20px] text-red-500">
+        <p className="whitespace-pre-line mt-1 text-sm min-h-[20px] text-red-500">
           {phoneError || '\u00A0'}
         </p>
       </label>
