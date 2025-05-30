@@ -28,6 +28,9 @@ module.exports = {
         'fade-in-splash': 'fade-in 2s forwards',
         'fade-out-splash': 'fade-out 0.5s ease-in forwards',
       },
+      height: {
+        'screen-dvh': '100dvh',
+      },
     },
   },
   plugins: [],
