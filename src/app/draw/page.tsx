@@ -10,8 +10,9 @@ interface WinnerItem {
 
 interface Winner {
   perfectScoreWinner: WinnerItem | null;
-  randomWinner: WinnerItem;
+  randomWinner: WinnerItem[];
 }
+
 const ScreenDraw: React.FC = ({}) => {
   const [winners, setWinners] = useState<Winner | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -39,11 +40,29 @@ const ScreenDraw: React.FC = ({}) => {
   if (error) return <p className="text-red-500">{error}</p>;
 
   return (
-    <div className="flex flex-col">
-      <p>3개 다 맞춘사람: {winners?.perfectScoreWinner?.name}</p>
-      <p>전화번호: {winners?.perfectScoreWinner?.phone}</p>
-      <p>전체 당첨자 중 한명: {winners?.randomWinner?.name}</p>
-      <p>전화번호: {winners?.randomWinner?.phone}</p>
+    <div className="flex flex-col space-y-4">
+      <div>
+        <h2 className="text-xl font-bold">3개 다 맞춘 사람</h2>
+        {winners?.perfectScoreWinner ? (
+          <>
+            <p>이름: {winners.perfectScoreWinner.name}</p>
+            <p>전화번호: {winners.perfectScoreWinner.phone}</p>
+          </>
+        ) : (
+          <p>정답자 없음</p>
+        )}
+      </div>
+
+      <div>
+        <h2 className="text-xl font-bold">전체 참여자 중 무작위 10명</h2>
+        {winners?.randomWinner?.map((winner, idx) => (
+          <div key={idx}>
+            <p>
+              {idx + 1}. {winner.name} / {winner.phone}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

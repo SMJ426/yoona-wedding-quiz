@@ -13,9 +13,9 @@ export async function GET() {
     .find({}, { projection: { name: 1, phone: 1, score: 1, _id: 0 } })
     .toArray();
 
-  // 1) 전체 인원 중 랜덤 추출
-  const randomFromAll =
-    allEntries[Math.floor(Math.random() * allEntries.length)];
+  // 1) 전체 인원 중 랜덤 10명 추출
+  const shuffled = allEntries.sort(() => Math.random() - 0.5);
+  const randomFromAll = shuffled.slice(0, 10);
 
   // 2) 3개 다 맞춘 인원 중 랜덤 추출
   const perfectEntries = allEntries.filter((entry) => entry.score === 3);
