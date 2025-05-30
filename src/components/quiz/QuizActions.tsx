@@ -63,7 +63,7 @@ const QuizActions: React.FC<Props> = ({
   };
 
   return (
-    <div className="flex flex-col justify-between w-full h-full mt-6 ">
+    <div className="flex flex-col justify-between w-full h-full gap-3 mt-6">
       <AnswerOptionsWrapper
         optionsData={quizData.options}
         selectedIndex={selectedIndex}
