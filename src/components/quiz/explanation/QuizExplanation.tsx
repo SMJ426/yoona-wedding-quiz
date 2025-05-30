@@ -14,7 +14,7 @@ const QuizExplanation: React.FC = () => {
   }
 
   return (
-    <div className="flex flex-col justify-start w-full h-screen-dvh ">
+    <div className="flex flex-col justify-start w-full h-screen ">
       {/* title section */}
       <div className="p-[20px]">
         <p className="text-[13px]">유나와 희도의 결혼식</p>
