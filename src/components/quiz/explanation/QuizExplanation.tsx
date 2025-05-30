@@ -37,7 +37,7 @@ const QuizExplanation: React.FC = () => {
             퀴즈에 참여해주신 분들 중 추첨을 통해 소정의 선물을 드릴
             예정이에요🎁
           </li>
-          <li>
+          <li className="font-bold">
             이 퀴즈 페이지는 신부 신유나의 동생 신민재가 직접 만들었어요✌️
           </li>
         </ul>

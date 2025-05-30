@@ -72,9 +72,15 @@ const QuizResult: React.FC = () => {
 
       {/* 제출 문구 */}
       {submitted ? (
-        <p className="text-xl text-green-600">성공적으로 제출되었습니다.</p>
+        <div className="flex flex-col items-center justify-center gap-1">
+          <p className="text-xl text-green-600">성공적으로 제출되었습니다</p>
+          <p className="text-xl text-green-600">참여해주셔서 감사합니다😊</p>
+        </div>
       ) : !isError ? (
-        <p className="text-xl animate-pulse">제출 중…</p>
+        <div className="flex flex-col items-center justify-center ">
+          <p className="text-xl animate-pulse">제출 중…</p>
+          <p className="text-xl animate-pulse">나가지 말아주세요</p>
+        </div>
       ) : null}
 
       {/* 퀴즈 부연 설명 */}
